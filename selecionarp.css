@@ -1,0 +1,101 @@
+/* ----- ESTILIZAÇÃO DA TELA DE SELEÇÃO ----- */
+body {
+    background: url('Imagens/backgroundbv.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Oxanium', sans-serif;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #FFA500;
+    text-transform: uppercase;
+}
+
+/* Container Principal */
+#personagens {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Cada Classe */
+.personagem {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0px 0px 10px rgba(255, 140, 0, 0.8);
+}
+
+/* Imagens dos Personagens */
+.personagem img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.personagem img:hover {
+    transform: scale(1.1);
+}
+
+/* Botões */
+.personagem button {
+    background: #FFA500;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.personagem button:hover {
+    background: #FF4500;
+}
+
+/* Mensagem de Confirmação */
+#mensagem {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #FFD700;
+}
+/* ----- BOTÃO DE CONFIRMAR SELEÇÃO ----- */
+#confirmar-btn {
+    background: #FFA500;
+    color: black;
+    padding: 10px 20px;
+    width: 220px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+    display: block;
+    text-align: center;
+}
+
+/* Efeito ao passar o mouse */
+#confirmar-btn:hover {
+    background: #FF4500;
+    transform: scale(1.05);
+}
+
+/* Efeito de clique */
+#confirmar-btn:active {
+    transform: scale(0.95);
+}
+
