@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Personagem</title>
+    <link rel="stylesheet" href="selecionarp.css">
+
+</head>
+<body>
+    <h2>Escolha seu Personagem</h2>
+
+<div id="personagens">
+    <div class="personagem">
+        <img src="Sede-das-profundezas.webp" alt="Sede das Profundezas">
+        <button onclick="selecionar('Sede das Profundezas')">Sede das Profundezas</button>
+    </div>
+    
+    <div class="personagem">
+        <img src="Relampago-Carmesim.webp" alt="Trovão Carmesim">
+        <button onclick="selecionar('Trovão Carmesim')">Trovão Carmesim</button>
+    </div>
+    
+    <div class="personagem">
+        <img src="Espectro-Rubro.webp" alt="Espectro Rubro">
+        <button onclick="selecionar('Espectro Rubro')">Espectro Rubro</button>
+    </div>
+</div>
+
+<p id="mensagem"></p>
+
+<button id="confirmar-btn" onclick="confirmarSelecao()">Confirmar</button>
+
+
+
+    <script type="module" src="/JS/selecionar_personagem.js"></script>
+</body>
+</html>

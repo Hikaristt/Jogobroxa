@@ -1,0 +1,201 @@
+/* ----- IMPORTAÇÃO DE FONTES ----- */
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+/* ----- RESET GERAL ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oxanium', sans-serif;
+}
+
+/* ----- BODY (FUNDO) ----- */
+body {
+    background: url('Imagens/backgroundbv.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* ----- BARRA SUPERIOR ----- */
+.top-bar {
+    background: #FFA500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    z-index: 1000;
+}
+
+/* ----- ÍCONES À ESQUERDA ----- */
+.left-icons img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* ----- RELÓGIO NO CANTO DIREITO ----- */
+#datetime {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-align: right;
+    width: 150px;
+    white-space: nowrap;
+}
+
+/* ----- TÍTULO DO JOGO ----- */
+.game-title {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Creepster', cursive;
+    color: #8B0000;
+    text-shadow: 2px 2px 10px rgba(139, 0, 0, 0.8), 
+                 4px 4px 15px rgba(255, 0, 0, 0.6);
+    letter-spacing: 3px;
+    position: relative;
+    margin-top: 60px;
+}
+
+/* ----- CONTAINER DO LOGIN ----- */
+.login-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(255, 140, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+.login-container h1 {
+    color: #FFA500;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="email"], input[type="password"], input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 2px solid #FFA500;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    display: block;
+}
+
+button {
+    background: #FFA500;
+    color: black;
+    padding: 8px;
+    width: 200px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: block;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #FF4500;
+}
+
+/* ----- LINKS DE REDES SOCIAIS ----- */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 5px;
+    background: rgba(255, 140, 0, 0.8);
+    color: black;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    background: #FF4500;
+}
+
+/* ----- MODAL DE INVENTÁRIO E EQUIPAMENTO ----- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 80%;
+    max-width: 600px;
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.character-equipment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 5px;
+}
+
+.equipment-slot, .inventory-slot {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.inventory-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 5px;
+}

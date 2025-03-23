@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo - Movimentação Gradual</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+    <!-- HUD do jogador -->
+    <div class="hud">
+        <div class="player-info">
+            <img id="player-avatar" src="placeholder.jpg" width="50px" alt="Avatar">
+            <div class="player-details">
+                <p id="player-name">Nome</p>
+                <p id="player-level">Nível: 1</p>
+                <p><span id="player-exp">0</span></p>
+                <p><span class="label-pb">PB:</span> <span id="player-pb">0</span></p>
+                <p><span class="label-ryos">Ryos:</span> <span id="player-ryos">100</span></p>
+                <p><span class="label-cupons">Cupons:</span> <span id="player-cupons">50</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="menu-container">
+        <button class="hamburger" id="menu-toggle">&#9776;</button>
+        <div class="menu-options" id="menu-options">
+            <a href="#" id="rankings-option">Rankings</a>
+            <a href="#" id="personagem-option">Personagem</a>
+            <a href="#" id="servos-option">Servos</a>
+        </div>
+    </div>
+    
+    <div class="bottom-menu">
+        <button id="bottom-menu-toggle">Menu Inferior</button>
+        <div id="bottom-menu" style="display:none;">
+            <a href="#" id="formacao-option">Formação</a>
+            <a href="#" id="guildas-option">Guildas</a>
+            <a href="#" id="equipamentos-option">Equipamentos</a>
+            <a href="#" id="relacionamentos-option">Relacionamentos</a>
+        </div>
+    </div>
+    
+    <!-- Janelas Modais do menu inferior -->
+    <div class="modal" id="formacao-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-formacao-modal">&times;</span>
+            <h2>Formação</h2>
+            <p>Conteúdo da formação...</p>
+        </div>
+    </div>
+    
+    <div class="modal" id="guildas-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-guildas-modal">&times;</span>
+            <h2>Guildas</h2>
+            <p>Conteúdo das guildas...</p>
+        </div>
+    </div>
+    
+    <div class="modal" id="equipamentos-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-equipamentos-modal">&times;</span>
+            <h2>Equipamentos</h2>
+            <p>Conteúdo dos equipamentos...</p>
+        </div>
+    </div>
+    
+    <div class="modal" id="relacionamentos-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-relacionamentos-modal">&times;</span>
+            <h2>Relacionamentos</h2>
+            <p>Conteúdo dos relacionamentos...</p>
+        </div>
+    </div>
+    
+    
+    <!-- Janelas Modais -->
+    <div class="modal" id="rankings-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-rankings-modal">&times;</span>
+            <h2>Rankings</h2>
+            <div id="rankings-list">
+                <!-- Os rankings serão adicionados aqui dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="personagem-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-personagem-modal">&times;</span>
+            <h2>Personagem</h2>
+            <div class="character-container">
+                <div class="character-equipment">
+                    <img id="character-image" src="" alt="Personagem" class="character-photo">
+                    <div class="equipment-grid">
+                        <div class="equipment-slot" id="head-slot"></div>
+                        <div class="equipment-slot" id="chest-slot"></div>
+                        <div class="equipment-slot" id="legs-slot"></div>
+                        <div class="equipment-slot" id="feet-slot"></div>
+                        <div class="equipment-slot" id="weapon-slot"></div>
+                        <div class="equipment-slot" id="shield-slot"></div>
+                    </div>
+                </div>
+                <div class="inventory-container">
+                    <h3>Inventário</h3>
+                    <div class="inventory-grid">
+                        <!-- Criação da bag: 4 colunas por 8 linhas -->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                const inventoryGrid = document.querySelector(".inventory-grid");
+                                for (let i = 0; i < 32; i++) {
+                                    let slot = document.createElement("div");
+                                    slot.classList.add("inventory-slot");
+                                    inventoryGrid.appendChild(slot);
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="servos-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-servos-modal">&times;</span>
+            <h2>Servos</h2>
+            <p>Conteúdo de servos...</p>
+        </div>
+    </div>
+    
+    <!-- Mapa do jogo -->
+    <div class="map-container">
+        <div class="movable-area">
+            <img id="player" src="placeholder_pixel.png" width="100px" alt="Personagem">
+        </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+</body>
+</html>
