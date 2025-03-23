@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <div class="top-bar">
+        <div class="left-icons">
+            <a href="#"><img src="icondisc.png" alt="Discord"></a>
+            <a href="#"><img src="iconrecarga.webp" alt="Recarga"></a>
+        </div>
+        <div id="datetime"></div> <!-- Data e Hora -->
+    </div>
+
+    <!-- Container de Login -->
+    <div class="login-container">
+        <h1 id="form-title">Login</h1>
+
+        <!-- Inputs de Login e Registro -->
+        <input type="email" id="email" placeholder="E-mail">
+        <input type="password" id="password" placeholder="Senha">
+        <input type="text" id="username" placeholder="usuaário" style="display: none;">
+        <input type="password" id="confirm-password" placeholder="Confirme sua Senha" style="display: none;">
+
+        <!-- Botões -->
+        <button id="login-btn" onclick="logar()">Entrar</button>
+        <button id="register-btn" onclick="toggleForm()">Registrar</button>
+        <button id="back-btn" onclick="toggleForm()" style="display: none;">Voltar</button>
+        <button id="confirm-register-btn" onclick="cadastrar()" style="display: none;">Finalizar Cadastro</button>
+
+        <p id="mensagem"></p>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="register.js"></script>
+</body>
+
+</html>
